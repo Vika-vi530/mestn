@@ -5,7 +5,7 @@ export default function Index() {
   return (
     <View style={{ flex: 1 }}>
       <WebView
-        source={{ uri: "https://vika-vi530.github.io/mestn" }}
+        source={{ uri: "https://vika-vi530.github.io/mestn/adaptive-app/" }}
         style={{ flex: 1 }}
       />
     </View>
