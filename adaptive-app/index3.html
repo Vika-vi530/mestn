@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сегодня</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .main-screen {
+            width: 100%;
+            min-height: 100vh;
+            padding: clamp(50px, 8vh, 110px) 28px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .main-screen h1 {
+            font-family: 'Caveat', cursive;
+            font-size: clamp(48px, 8vw, 100px);
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        /* Дата — кликабельная ссылка на календарь */
+        .main-screen .date {
+            display: inline-block;
+            margin-top: 6px;
+            font-size: clamp(16px, 1.6vw, 22px);
+            color: #111;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color .2s;
+        }
+        .main-screen .date:hover {
+            color: #6ea8ff;
+        }
+
+        .city-row {
+            margin-top: clamp(40px, 8vh, 90px);
+            width: 100%;
+            max-width: min(560px, 90vw);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .city {
+            display: flex;
+            gap: 8px;
+            font-size: clamp(18px, 2vw, 26px);
+        }
+        .change-city {
+            background: none;
+            border: none;
+            font-family: 'Caveat', cursive;
+            font-size: clamp(18px, 2vw, 26px);
+            color: #3a3a3a;
+            cursor: pointer;
+        }
+
+        .counter {
+            margin-top: clamp(30px, 5vh, 60px);
+            font-size: clamp(16px, 1.6vw, 20px);
+        }
+
+        .accept-btn {
+            margin-top: clamp(40px, 8vh, 100px);
+            width: clamp(180px, 22vw, 260px);
+            height: clamp(100px, 13vw, 150px);
+            border: none;
+            border-radius: 50%;
+            background: #bcbcbc;
+            font-family: 'Caveat', cursive;
+            font-size: clamp(24px, 2.6vw, 34px);
+            font-weight: 700;
+            cursor: pointer;
+            transition: background .2s, transform .15s;
+        }
+        .accept-btn:hover  { background: #a8a8a8; }
+        .accept-btn:active { transform: scale(0.96); }
+
+        .to-calendar {
+            display: block;
+            margin-top: 20px;
+            font-size: clamp(13px, 1.3vw, 16px);
+            color: #4a4a4a;
+            text-decoration: underline;
+        }
+
+        .time-left {
+            margin-top: auto;
+            margin-bottom: 20px;
+            font-size: clamp(15px, 1.5vw, 20px);
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div class="screen">
+            <div class="main-screen">
+                <h1>Сегодня</h1>
+
+                <a class="date" id="date" href="calen.html">18 сентября</a>
+
+                <div class="city-row">
+                    <div class="city">
+                        <span>📍</span>
+                        <span id="city">Брест</span>
+                    </div>
+                    <button class="change-city" id="changeCity">Сменить город</button>
+                </div>
+
+                <p class="counter" id="counter">Сегодня: 0 из 1</p>
+
+                <button class="accept-btn" id="acceptBtn">Принять задание</button>
+
+                <a class="to-calendar" href="calen.html">Открыть календарь</a>
+
+                <p class="time-left" id="timeLeft">
+                    Осталось 6 часов<br>до конца дня
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как это работает</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .onb3 {
+            width: 100%;
+            min-height: 100vh;
+            padding: clamp(40px, 8vh, 100px) 28px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .onb3 h1 {
+            font-family: 'Caveat', cursive;
+            font-size: clamp(40px, 6vw, 80px);
+            font-weight: 700;
+            margin-bottom: clamp(20px, 3vh, 40px);
+            line-height: 1;
+        }
+        .flow {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            width: 100%;
+        }
+        .bubble {
+            background: #a9c2ea;
+            color: #111;
+            padding: clamp(14px, 2vh, 22px) clamp(20px, 3vw, 30px);
+            border-radius: 50% / 50%;
+            font-size: clamp(14px, 1.6vw, 20px);
+            line-height: 1.3;
+            max-width: min(320px, 70vw);
+            text-align: center;
+        }
+        .bubble.last {
+            background: #fff;
+            border: 1.5px solid #111;
+            border-radius: 50%;
+            padding: clamp(18px, 3vh, 30px) clamp(18px, 3vw, 28px);
+        }
+        .arrow {
+            font-size: clamp(20px, 2.4vw, 30px);
+            transform: rotate(90deg);
+            margin: -4px 0;
+        }
+        .onb3 .btn { margin-top: auto; }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div class="screen">
+            <div class="onb3">
+                <h1>Как это работает</h1>
+
+                <div class="flow">
+                    <div class="bubble">Утром получаешь задание</div>
+                    <div class="arrow">↘</div>
+                    <div class="bubble">Идёшь по городу и ищешь</div>
+                    <div class="arrow">↘</div>
+                    <div class="bubble">Находишь. Фотографируешь</div>
+                    <div class="arrow">↘</div>
+                    <div class="bubble last">
+                        Получаешь новые воспоминания и фото с ним в календаре))
+                    </div>
+                </div>
+
+                <a class="btn" href="index3.html">Продолжить</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

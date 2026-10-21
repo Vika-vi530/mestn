@@ -1,0 +1,108 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.task-screen {
+    width: 100%;
+    min-height: 100vh;
+    padding: clamp(50px, 8vh, 110px) 28px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    font-family: 'Caveat', cursive;
+    font-size: clamp(44px, 7vw, 80px);
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* ---------- «Полароид» ---------- */
+.photo-wrap {
+    position: relative;
+    margin-top: clamp(28px, 5vh, 60px);
+    width: clamp(240px, 34vw, 340px);
+    background: #f4f4f2;
+    padding: 12px 12px clamp(40px, 6vh, 70px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Слот фиксирован как квадрат */
+.photo-slot {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background .2s;
+}
+.photo-slot:hover { background: #fafafa; }
+
+/* Картинка всегда заполняет слот целиком, без искажений */
+.task-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Иконка камеры */
+.camera-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+.upload-badge {
+    position: absolute;
+    right: -22px;
+    bottom: -16px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+
+.hidden { display: none !important; }
+
+/* Звёздочки */
+.sparkle {
+    position: absolute;
+    color: #f2c94c;
+    font-size: 20px;
+    pointer-events: none;
+    line-height: 1;
+}
+.sparkle-tl { top: -22px; left: -28px;  font-size: 28px; }
+.sparkle-tr { top: -14px; right: -26px; font-size: 22px; }
+.sparkle-bl { bottom: 60px; left: -30px; font-size: 26px; }
+.sparkle-br { bottom: 40px; right: -24px; font-size: 18px; }
+
+/* Текст задания */
+.task-text {
+    margin-top: clamp(24px, 4vh, 44px);
+    font-size: clamp(15px, 1.6vw, 20px);
+    line-height: 1.5;
+    max-width: min(560px, 85vw);
+    padding: 0 8px;
+}
+.task-text .highlight { color: #c0392b; }
+
+/* Кнопка «Выполнить» */
+.done-btn {
+    margin-top: auto;
+    margin-bottom: clamp(30px, 6vh, 80px);
+}

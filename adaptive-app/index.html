@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Местный</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .onb1 {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background: url("гл.jpg") center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 24px;
+            text-align: center;
+            color: #fff;
+        }
+        .onb1::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg,
+                        rgba(0,0,0,0.25) 0%,
+                        rgba(0,0,0,0.05) 40%,
+                        rgba(0,0,0,0.45) 100%);
+            pointer-events: none;
+        }
+        .onb1 > * { position: relative; z-index: 1; }
+
+        .onb1 h1 {
+            font-family: 'Caveat', cursive;
+            font-size: clamp(56px, 9vw, 120px); 
+            font-weight: 700;
+            text-shadow: 0 4px 20px rgba(0,0,0,.45);
+            line-height: 1;
+        }
+        .onb1 blockquote {
+            margin-top: 24px;
+            font-family: 'Caveat', cursive;
+            font-size: clamp(20px, 3vw, 34px);
+            line-height: 1.35;
+            max-width: min(420px, 80vw);
+            text-shadow: 0 2px 12px rgba(0,0,0,.55);
+        }
+        .onb1 .btn {
+            position: absolute;
+            bottom: clamp(24px, 6vh, 60px);
+            left: 50%;
+            transform: translateX(-50%);
+
+            
+            background: rgba(40,40,40,.85);
+            font-size: clamp(22px, 2.5vw, 28px);
+            padding: 14px 52px;
+            white-space: nowrap;
+        }
+        .onb1 .btn:hover { background: rgba(0,0,0,.9); }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div class="screen">
+            <div class="onb1">
+                <h1>Местный</h1>
+                <blockquote>«Ты не узнаешь свой город, пока что.»</blockquote>
+                <a class="btn" href="index1.html">Начать, чтобы начать</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <div class="app">
+        <div class="screen">
+            <div class="task-screen">
+
+                <h1 class="title">Задание</h1>
+
+                <div class="photo-wrap">
+                    <div class="photo-slot" id="photoSlot">
+
+                        <img id="taskImage" alt="">
+
+                        <div class="camera-icon" id="cameraIcon">
+                            <svg viewBox="0 0 64 64" width="110" height="110" aria-hidden="true">
+                                <path d="M8 20h10l4-6h20l4 6h10a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V24a4 4 0 0 1 4-4z" fill="#000"/>
+                                <circle cx="32" cy="37" r="10" fill="#fff"/>
+                                <circle cx="32" cy="37" r="6"  fill="#000"/>
+                            </svg>
+                            <div class="upload-badge">
+                                <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="12" fill="#000"/>
+                                    <path d="M12 6l4 4h-2.5v6h-3V10H8l4-4z" fill="#fff"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+
+                <p class="task-text" id="taskText"></p>
+
+                <button class="btn done-btn" id="doneBtn">Выполнить</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="task.js"></script>
+</body>
+</html>

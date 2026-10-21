@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Привет!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .onb2 {
+            width: 100%;
+            min-height: 100vh;
+            padding: clamp(60px, 10vh, 140px) 28px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        .onb2 h1 {
+            font-family: 'Caveat', cursive;
+            font-size: clamp(56px, 9vw, 120px);
+            font-weight: 700;
+            margin-bottom: clamp(24px, 4vh, 48px);
+            line-height: 1;
+        }
+        .onb2 p {
+            font-size: clamp(16px, 1.8vw, 24px);
+            line-height: 1.5;
+            margin-bottom: clamp(14px, 2vh, 24px);
+            max-width: min(520px, 80vw);
+        }
+        .onb2 .accent {
+            font-size: clamp(20px, 2.4vw, 30px);
+            margin-top: 20px;
+            background: linear-gradient(90deg, #b57cff, #6ea8ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 600;
+        }
+        .onb2 .accent2 {
+            font-size: clamp(20px, 2.4vw, 30px);
+            margin-bottom: clamp(30px, 5vh, 60px);
+        }
+        .onb2 .btn { margin-top: auto; }
+
+        .onb2 .star {
+            position: absolute;
+            font-size: 22px;
+            color: #000;
+            pointer-events: none;
+        }
+        .onb2 .star.s1 { top: 12vh;  right: 18vw; font-size: clamp(12px, 1.4vw, 18px); }
+        .onb2 .star.s2 { top: 15vh;  left:  16vw; font-size: clamp(16px, 2vw, 28px); }
+        .onb2 .star.s3 { top: 18vh;  right: 15vw; font-size: clamp(12px, 1.6vw, 22px); }
+        .onb2 .star.s4 { top: 21vh;  right: 12vw; font-size: clamp(8px, 1vw, 14px); }
+    </style>
+</head>
+<body>
+         <div class="onb2">
+                <h1>Привет!</h1>
+                <p>Это «Местный»</p>
+                <p>Приложение, которое каждый день даёт тебе одно задание</p>
+                <p>Чтобы ты</p>
+                <p class="accent">Вышел. Посмотрел.</p>
+                <p class="accent2">Увидел.</p>
+
+                <a class="btn" href="index2.html">Далее</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
